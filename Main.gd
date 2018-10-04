@@ -40,3 +40,10 @@ func _on_StartTimer_timeout():
 func _on_ScoreTimer_timeout():
 	score += 1
 	$HUD.update_score(score)
+	
+func _on_HUD_start_game():
+	new_game()
+
+
+func _on_Player_hit():
+	game_over()
